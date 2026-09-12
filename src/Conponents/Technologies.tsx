@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TechnologyCard from "./TechnologyCard";
+import { toast } from "react-toastify";
 
 type Technology = {
   id: string;
@@ -19,23 +20,34 @@ type TechnologiesProps = {
 function Technologies({ technologies }: TechnologiesProps) {
   const [stack, setStack] = useState<Technology[]>([]);
 
+  // Add to Stack
   const handleAddToStack = (technology: Technology) => {
     const alreadyAdded = stack.some((item) => item.id === technology.id);
 
     if (alreadyAdded) {
-      alert("This technology is already in your stack!");
+      toast.warning("This technology is already in your stack!");
       return;
     }
 
     setStack([...stack, technology]);
+
+    toast.success(`${technology.name} added to your stack!`);
   };
 
+  // Remove one technology
   const handleRemove = (id: string) => {
+    const removedTechnology = stack.find((item) => item.id === id);
+
     setStack(stack.filter((item) => item.id !== id));
+
+    toast.info(`${removedTechnology?.name} removed from your stack!`);
   };
 
+  // Remove all technologies
   const handleRemoveAll = () => {
     setStack([]);
+
+    toast.info("All technologies removed from your stack!");
   };
 
   return (
@@ -91,6 +103,7 @@ function Technologies({ technologies }: TechnologiesProps) {
 
                     <div>
                       <h4 className="font-semibold">{technology.name}</h4>
+
                       <p className="text-xs text-gray-400">
                         {technology.category}
                       </p>

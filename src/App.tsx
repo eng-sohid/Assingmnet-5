@@ -2,6 +2,7 @@ import "./App.css";
 import Nav from "./Conponents/Nav";
 import Banner from "./Conponents/Banner";
 import Technologies from "./Conponents/Technologies";
+import Toast from "./Conponents/Toast";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Nav />
       <Banner />
       <Technologies technologies={technologies} />
+      <Toast />
     </>
   );
 }
