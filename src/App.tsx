@@ -4,6 +4,7 @@ import Banner from "./Conponents/Banner";
 import Technologies from "./Conponents/Technologies";
 import Toast from "./Conponents/Toast";
 import { useEffect, useState } from "react";
+import Footer from "./Conponents/Footer";
 
 function App() {
   const [technologies, setTechnologies] = useState([]);
@@ -27,6 +28,7 @@ function App() {
       <Banner />
       <Technologies technologies={technologies} />
       <Toast />
+      <Footer />
     </>
   );
 }
