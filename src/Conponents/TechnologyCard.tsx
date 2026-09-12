@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 type Technology = {
   id: string;
   name: string;
@@ -13,10 +11,11 @@ type Technology = {
 
 type TechnologyCardProps = {
   technology: Technology;
+  isAdded: boolean;
+  onAdd: (technology: Technology) => void;
 };
 
-function TechnologyCard({ technology }: TechnologyCardProps) {
-  const [added, setAdded] = useState(false);
+function TechnologyCard({ technology, isAdded, onAdd }: TechnologyCardProps) {
   return (
     <div className="border rounded-xl p-5 shadow-sm">
       <div className="flex items-start justify-between">
@@ -46,14 +45,13 @@ function TechnologyCard({ technology }: TechnologyCardProps) {
       </div>
 
       <button
-        onClick={() => setAdded(!added)}
-        className={`w-full mt-5 py-2.5 rounded-lg font-semibold transition ${
-          added
-            ? "bg-pink-200 text-pink-600 font-bold text-xl "
-            : "bg-black text-white "
+        onClick={() => onAdd(technology)}
+        disabled={isAdded}
+        className={`w-full mt-5 py-2.5 rounded-lg font-semibold ${
+          isAdded ? "bg-pink-200 text-pink-600" : "bg-black text-white"
         }`}
       >
-        {added ? " ✓ Added to Stack " : "Add to Stack"}
+        {isAdded ? "✓ Added to Stack" : "Add to Stack"}
       </button>
     </div>
   );
