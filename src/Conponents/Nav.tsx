@@ -36,7 +36,7 @@ const Nav = () => {
           <img
             src={Logo}
             alt="Logo"
-            className="absolute left-1/2 -translate-x-1/2 w-[90px]"
+            className="absolute left-1/3 -translate-x-1/2 w-[90px]"
           />
 
           <div className="flex gap-3 items-center ml-auto">
