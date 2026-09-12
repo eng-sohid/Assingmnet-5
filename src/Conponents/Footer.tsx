@@ -6,7 +6,6 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12 sm:px-6 sm:py-16 lg:px-8">
         {/* Main Footer */}
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-5">
-          {/* Brand */}
           <div className="text-center lg:col-span-2 lg:text-left">
             <img
               src={Logo}
