@@ -51,7 +51,7 @@ function TechnologyCard({ technology, isAdded, onAdd }: TechnologyCardProps) {
       <button
         onClick={() => onAdd(technology)}
         disabled={isAdded}
-        className={`w-full mt-5 py-2.5 rounded-lg font-semibold ${
+        className={`w-full mt-5 py-2.5 rounded-lg font-semibold cursor-pointer ${
           isAdded ? "bg-pink-200 text-pink-600" : "bg-black text-white"
         }`}
       >

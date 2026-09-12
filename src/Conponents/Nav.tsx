@@ -16,10 +16,10 @@ const Nav = () => {
             <li>Contact</li>
           </ul>
 
-          <div className="flex gap-4 items-center">
-            <button className="text-[#475569]">Sign In</button>
+          <div className="flex gap-4 items-center ">
+            <button className="text-[#475569] cursor-pointer">Sign In</button>
 
-            <button className="bg-[#D91B7E] text-white py-1 px-4 rounded-full">
+            <button className="bg-[#D91B7E] text-white py-1 px-4 rounded-full cursor-pointer">
               Sign Up
             </button>
           </div>
@@ -40,7 +40,7 @@ const Nav = () => {
           />
 
           <div className="flex gap-3 items-center ml-auto">
-            <button className="text-[#475569] text-sm">Sign In</button>
+            <button className="text-[#475569]  text-sm">Sign In</button>
 
             <button className="bg-[#D91B7E] text-white py-1.5 px-4 rounded-full text-sm">
               Sign Up

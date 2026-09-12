@@ -18,11 +18,11 @@ const Banner = () => {
         </p>
 
         <div className="flex gap-3 mt-8 justify-center md:justify-start">
-          <button className="bg-gradient-to-r from-orange-500 to-[#D91B7E] text-white px-4 py-3 rounded-md">
+          <button className="bg-gradient-to-r from-orange-500 to-[#D91B7E] text-white px-4 py-3 rounded-md cursor-pointer">
             Explore Technologies
           </button>
 
-          <button className="border border-gray-300 text-[#475569] px-8 py-3 rounded-md">
+          <button className="border border-gray-300 text-[#475569] px-8 py-3 rounded-md cursor-pointer">
             Learn More
           </button>
         </div>
