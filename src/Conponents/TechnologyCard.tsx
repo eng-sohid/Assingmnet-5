@@ -17,7 +17,11 @@ type TechnologyCardProps = {
 
 function TechnologyCard({ technology, isAdded, onAdd }: TechnologyCardProps) {
   return (
-    <div className="border rounded-xl p-5 shadow-sm">
+    <div
+      className={`rounded-xl p-5 shadow-sm ${
+        isAdded ? "border border-pink-400" : "border-none"
+      }`}
+    >
       <div className="flex items-start justify-between">
         <img
           src={technology.icon}
