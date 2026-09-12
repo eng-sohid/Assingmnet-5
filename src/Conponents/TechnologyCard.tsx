@@ -18,7 +18,7 @@ type TechnologyCardProps = {
 function TechnologyCard({ technology, isAdded, onAdd }: TechnologyCardProps) {
   return (
     <div
-      className={`rounded-xl p-5 shadow-sm ${
+      className={`rounded-xl p-5 shadow-sm  ${
         isAdded ? "border border-pink-400" : "border-none"
       }`}
     >
